@@ -21,7 +21,7 @@ categories:
   * docker top <id/container_name>  
   显示一个运行的容器里面的进程信息
   * docker inspect <id/container_name>  
-  查看容器内部详情细节，查看容器ip： docker inspect -f '{{ .NetworkSettings.IPAddress }}' <id/container_name>
+  查看容器内部详情细节，查看容器ip： docker inspect -f '&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;' <id/container_name>
   * docker cp <id/container_name>:/container_path to_path  
   从容器里面拷贝文件/目录到本地一个路径
   * docker start/stop/restart/kill/rm <id/container_name>  
