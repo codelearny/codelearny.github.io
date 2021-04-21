@@ -5,10 +5,10 @@ tags: [Spring,Cache]
 categories:
     - [Java,Spring,Spring Cache]
 ---
-Spring Cache 设计原理
-===
+## Spring Cache 设计原理
+
 location:spring-context/org.springframework.cache
-* 两大接口
+### 两大接口
     >org.springframework.cache.CacheManager 缓存管理核心SPI，允许检索命名缓存区域
     >org.springframework.cache.Cache 定义通用缓存操作的接口
 * org.springframework.cache.annotation包  
@@ -30,5 +30,5 @@ location:spring-context/org.springframework.cache
      
 
 
-* Spring Boot 自动配置
+### Spring Boot 自动配置
     >org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration  

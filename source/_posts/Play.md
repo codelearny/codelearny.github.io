@@ -1,5 +1,5 @@
 ---
-title: 哈哈
+title: MarkDown 基本语法
 date: 2021-01-09 20:16:05
 tags: [Java,C++,Python,JS,Mysql]
 categories:
@@ -13,62 +13,132 @@ categories:
     - [Network,TCP/IP]
     - [Python]
 ---
-大标题
-=====
-小标题
------
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-> this is a block
-and 
+### 标题
+    大标题
+    ===
+    小标题
+    ---
+    # 一级标题
+    ## 二级标题
+    ### 三级标题
+    #### 四级标题
+    ##### 五级标题
+    ###### 六级标题
+### 引用
+    >this is a block
+    >>this is another
+    >>>段落的换行两个空格加回车  
+    或者直接用空行分开
+>this is a block
 >>this is another
->>>this is another
+>>>段落的换行两个空格加回车  
+或者直接用空行分开
+### 列表
+    1. 有序列表只需要1开头
+    20. 其他数字不影响顺序
+    13. cccc
+    * 无序列表
+        + 列表嵌套只需要加缩进
+            - ffff
+1. 有序列表只需要1开头
+20. 其他数字不影响顺序
+13. cccc
+* 无序列表
+    + 列表嵌套只需要加缩进
+        - ffff
 
-* hexo init #初始化博客
-* hexo n "我的博客" == hexo new "我的博客" #新建文章
-* hexo g == hexo generate #生成
-* hexo s == hexo server #启动服务预览
-* hexo d == hexo deploy #部署
-* hexo server -p 5000 #更改端口
-* hexo server -i 192.168.1.1 #自定义 IP
-* hexo clean #清除缓存
+### 代码块
+缩进四个空格表示代码块
 
-+ cc
-+ dd
-- ee
-- ff
-1. gg
-2. hh
+        //代码块
+三个`表示代码块，js为代码语言
 
+<pre>
+<code>```js</code>
+console.log('hello')
+<code>```</code>
+</pre>
 
-普通段落
-    
-    hahah
-    public static void main(){
-
-    }
-
+```js
+console.log('hello')
+```
+### 分割线
+    ***
 ***
+    ---
+---
+### 字体效果
+    *斜体*  _斜体_
+*斜体*  _斜体_
 
+    **粗体**  __粗体__
+**粗体**  __粗体__
 
-*strong*
-**stronger**
+    ***粗体+斜体***
+***粗体+斜体***
+
+    ~~删除线~~
 ~~删除线~~
 
-![哈哈](/path/to/img.jpg "Optional title")
+    `阴影`
+`阴影`
+### 表格
+    name|age|tall|address
+    --|:--:|:--|--:
+    默认|居中|左对齐|右对齐
+    black|22|188|a
+name|age|tall|address
+--|:--:|:--|--:
+默认|居中|左对齐|右对齐
+black|22|188|a
+### 图片与链接
+#### 链接
+链接定义 `\[内容\](地址 "标题")`  
+也可以直接用`<地址>`
 
+    [example](https://codelearny.github.io/ "the description of this site") with description.
+    [example](https://codelearny.github.io/) without title attribute.
+    <https://codelearny.github.io/>
+[example](https://codelearny.github.io/ "the description of this site") with description.  
+[example](https://codelearny.github.io/) without title attribute.  
+<https://codelearny.github.io/>
 
-This is [an example](http://example.com/ "Title") inline link.
+可以将链接地址设为变量`[标识]:地址 "标题"`  
+定义时直接引用`[内容][标识]`
 
-[This link](http://example.net/) has no title attribute.
+    [1]:https://github.com
+    [my blog]:https://codelearny.github.io/ "我的博客"
+    [This is my blog][my blog]
+    [github][1]
+[1]:https://github.com
+[my blog]:https://codelearny.github.io/ "我的博客"
+[This is my blog][my blog]  
+[github][1]
 
+#### 图片
+图片定义和链接类似，以感叹号开头`![Alt Text](地址 "标题")`  
+也可以使用变量`![Alt Text][标识])`
 
- name | age | tall 
--|-|-
-ace| 11| 158
-black| 22| 188
+    ![说明](https://github.githubassets.com/favicons/favicon.png "提示文字")
+    ![一个图片][2]
+    [2]:/path/to/pic
+![说明](https://github.githubassets.com/favicons/favicon.png "提示文字")
+#### 锚点
+锚点定义和链接定义类似 `[内容](#目标)`  
+跳转的目标可以是各级标题  
+也可以使用html标记的id属性`<span id="id">锚点目标</span>`  
+`[内容](#id)`
+
+    [跳转到标题](#标题)
+    [跳转到列表](#列表)
+[跳转到标题](#标题)  
+[跳转到列表](#列表)
+### 其它
+Markdown支持html标签，可以直接在文档中使用
+    
+    <kbd>kbd</kbd>
+<kbd>kbd</kbd>
+Markdown使用\转义特殊字符
+    
+    \`转义\`
+\`转义\`
