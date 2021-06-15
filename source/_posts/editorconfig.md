@@ -1,7 +1,7 @@
 ---
 title: editorconfig
 date: 2021-06-15 10:56:59
-tags: [editorconfig]
+tags: [editorconfig,engineering]
 ---
 [EditorConfig官网](https://editorconfig.org/)
 > `EditorConfig`有助于在不同的编辑器和IDE中为在同一项目上工作的多个开发人员保持一致的编码样式。`EditorConfig`项目由一个用于定义编码样式的文件格式和一组文本编辑器插件组成，这些插件使编辑器能够读取文件格式并遵循定义的样式。`EditorConfig`文件易于阅读，并且与版本控制系统配合良好。
