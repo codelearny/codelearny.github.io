@@ -148,3 +148,7 @@ $ lsof -i
 ```bash
 $ lsof -i:{port}
 ```
+查看进程使用端口相关的网络信息  
+```bash
+$ netstat -nltp
+```
