@@ -3,7 +3,6 @@ title: 线上进程问题排查常用方法
 date: 2021-03-08 20:17:42
 tags: [jstack,jmap,ps]
 ---
->
 ### CPU
 查看进程pid
 ```bash
