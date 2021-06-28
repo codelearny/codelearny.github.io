@@ -142,12 +142,26 @@ authorization (你能做什么?)
 ##### AbstractAuthenticationProcessingFilter
 认证处理的拦截器，从`HttpServletRequest`中取得用于认证的信息，封装为`Authentication`（例如：`UsernamePasswordAuthenticationToken`）。然后调用`AuthenticationManager`进行认证。
 
-认证成功，调用`SessionAuthenticationStrategy`保存`Authentication`至`SecurityContextHolder`，`SecurityContextPersistenceFilter`保存`SecurityContext`至`HttpSession`。调用`RememberMeServices.loginSuccess`，发布`InteractiveAuthenticationSuccessEvent`事件，调用`AuthenticationSuccessHandler`。
+认证成功，调用`SessionAuthenticationStrategy`处理登录成功的`Session`信息，保存认证信息到`SecurityContextHolder`，随后`SecurityContextPersistenceFilter`保存`SecurityContext`至`HttpSession`。调用`RememberMeServices.loginSuccess`，发布`InteractiveAuthenticationSuccessEvent`事件，调用`AuthenticationSuccessHandler`。
 
 认证失败，清理`SecurityContextHolder`，调用`RememberMeServices.loginFail`，调用`AuthenticationFailureHandler`。
+##### Session Management
+`HTTP session`的管理主要由`SessionManagementFilter`和`SessionAuthenticationStrategy`两个接口联合完成，通常包括防御会话固定攻击，指定会话超时时间，限制单个用户并发会话数等。
+##### Anonymous Authentication
+匿名认证，`Spring Security`提供了一种便捷的方式，对于未认证用户的行为进行统一管理
 
 #### 认证机制
 ##### 基于用户名、密码的认证
+`Spring Security`提供了如下内建的机制来获取用户名、密码
++ Form Login
++ Basic Authentication
++ Digest Authentication
+
+另外有如下的存储机制，可以和以上的获取机制任意组合
++ 简单的基于内存存储 In-Memory Authentication
++ 基于数据库的 JDBC Authentication
++ 自定义存储 UserDetailsService
++  LDAP Authentication
 ###### 表单登录
 1. 未认证的用户登录访问敏感资源`/private`
 2. `FilterSecurityInterceptor`拦截请求，抛出`AccessDeniedException`
@@ -193,15 +207,31 @@ protected void configure(HttpSecurity http) {
 认证主体，`UserDetailsService`生成`UserDetails`，`DaoAuthenticationProvider`验证`UserDetails`并返回`Authentication`
 ###### UserDetailsService
 加载用户数据的核心接口，由`DaoAuthenticationProvider`用来检索用户名、密码和其他属性以便认证，可以自定义检索逻辑，例如从数据库查询
-###### 密码存储
+###### PasswordEncoder
 `Spring Security`提供了`PasswordEncoder`接口存储密码，内置多种算法实现，如`bcrypt`，`pbkdf2`等
 ###### DaoAuthenticationProvider
+`AuthenticationProvider`接口的实现，使用`UserDetailsService`和`PasswordEncoder`认证用户名和密码。
+认证流程大致描述如下：
+1. 从获取用户名密码的拦截器（例如表单登录使用`UsernamePasswordAuthenticationFilter`）中解析请求信息，将认证所需信息封装到`UsernamePasswordAuthenticationToken`，交给`AuthenticationManager`进行认证
+2. `AuthenticationManager`的实现是`ProviderManager`,`ProviderManager`委托给`DaoAuthenticationProvider`执行
+3. `DaoAuthenticationProvider`通过`UserDetailsService`检索相关信息，得到`UserDetails`
+4. `DaoAuthenticationProvider`使用`PasswordEncoder`验证`UserDetails`
+5. 验证通过的`UserDetails`会被封装到`UsernamePasswordAuthenticationToken`，返回认证信息，进行过滤链后续处理
 
 ### CSRF
 Cross Site Request Forgery 跨站请求伪造，Spring Security默认启用csrf保护，CsrfFilter针对（"GET", "HEAD", "TRACE", "OPTIONS"）以外的方法生效，LazyCsrfTokenRepository将 CsrfToken 值存储在 HttpSession 中，并指定前端把CsrfToken 值放在名为“_csrf”的请求参数或名为“X-CSRF-TOKEN”的请求头字段里
 
 ### 异常处理
-ExceptionTranslationFilter 用于处理 AuthenticationException （未认证） 和 AccessDeniedException （拒绝访问） ，分别由 AuthenticationEntryPoint AccessDeniedHandler 接口处理，可以自定义处理逻辑
+`ExceptionTranslationFilter`用于处理`AuthenticationException`（未认证）和`AccessDeniedException`（拒绝访问） ，分别由`AuthenticationEntryPoint`，`AccessDeniedHandler`接口处理，可以自定义处理逻辑
+```java
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+		//添加自定义未授权和未登录结果返回
+        httpSecurity.exceptionHandling().accessDeniedHandler(restAccessDeniedHandler).authenticationEntryPoint(restAuthenticationEntryPoint);
+    }
+}
+```
 
 ## Java Configuration
 ### @EnableWebSecurity
@@ -782,7 +812,7 @@ public final class ExpressionUrlAuthorizationConfigurer<H extends HttpSecurityBu
 		super.afterInvocation(token, null);
 	}
 ```
-
+抽象安全拦截器，抽象了安全拦截管理的通用逻辑
 ```java
 public abstract class AbstractSecurityInterceptor
 		implements InitializingBean, ApplicationEventPublisherAware, MessageSourceAware {
@@ -901,7 +931,6 @@ public abstract class AbstractSecurityInterceptor
 
 }
 ```
-
 ### FormLoginConfigurer
 表单认证通过`FormLoginConfigurer`类配置
 ```java
@@ -918,6 +947,102 @@ public final class FormLoginConfigurer<H extends HttpSecurityBuilder<H>> extends
 		usernameParameter("username");
 		passwordParameter("password");
 	}
-
 ```
 ### UsernamePasswordAuthenticationFilter
+继承`AbstractAuthenticationProcessingFilter`，负责从请求中解析认证信息并交给`AuthenticationManager`认证
+```java
+	@Override
+	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
+			throws AuthenticationException {
+		if (this.postOnly && !request.getMethod().equals("POST")) {
+			throw new AuthenticationServiceException("Authentication method not supported: " + request.getMethod());
+		}
+		//从请求参数中获取用户名
+		String username = obtainUsername(request);
+		username = (username != null) ? username : "";
+		username = username.trim();
+		//从请求参数中获取密码
+		String password = obtainPassword(request);
+		password = (password != null) ? password : "";
+		//封装token
+		UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(username, password);
+		// Allow subclasses to set the "details" property
+		//token中保存额外的信息，如remoteAddress，sessionId
+		setDetails(request, authRequest);
+		//调用AuthenticationManager进行认证
+		return this.getAuthenticationManager().authenticate(authRequest);
+	}
+```
+### AbstractAuthenticationProcessingFilter
+处理基于http请求的认证过滤器抽象类，使用模板方法，完成过滤器的工作，将认证工作委托给子类处理
+```java
+	@Override
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+		//类似于适配器的处理
+		doFilter((HttpServletRequest) request, (HttpServletResponse) response, chain);
+	}
+	private void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+		//未匹配的请求不做处理
+		if (!requiresAuthentication(request, response)) {
+			chain.doFilter(request, response);
+			return;
+		}
+		try {
+			//模板方法，子类认证
+			Authentication authenticationResult = attemptAuthentication(request, response);
+			if (authenticationResult == null) {
+				//认证信息为空代表无法处理
+				// return immediately as subclass has indicated that it hasn't completed
+				return;
+			}
+			//session处理的策略接口
+			this.sessionStrategy.onAuthentication(authenticationResult, request, response);
+			// Authentication success
+			//可配置过滤器链后处理
+			if (this.continueChainBeforeSuccessfulAuthentication) {
+				chain.doFilter(request, response);
+			}
+			successfulAuthentication(request, response, chain, authenticationResult);
+		}
+		catch (InternalAuthenticationServiceException failed) {
+			this.logger.error("An internal error occurred while trying to authenticate the user.", failed);
+			unsuccessfulAuthentication(request, response, failed);
+		}
+		catch (AuthenticationException ex) {
+			// Authentication failed
+			unsuccessfulAuthentication(request, response, ex);
+		}
+	}
+	//成功处理方法
+	protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain,
+			Authentication authResult) throws IOException, ServletException {
+		//保存认证信息到SecurityContextHolder
+		SecurityContextHolder.getContext().setAuthentication(authResult);
+		if (this.logger.isDebugEnabled()) {
+			this.logger.debug(LogMessage.format("Set SecurityContextHolder to %s", authResult));
+		}
+		//记住我
+		this.rememberMeServices.loginSuccess(request, response, authResult);
+		//发布对应事件
+		if (this.eventPublisher != null) {
+			this.eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(authResult, this.getClass()));
+		}
+		//成功回调，比如跳转到之前访问的url，可自定义
+		this.successHandler.onAuthenticationSuccess(request, response, authResult);
+	}
+	//失败处理方法
+	protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
+			AuthenticationException failed) throws IOException, ServletException {
+		//清除认证信息
+		SecurityContextHolder.clearContext();
+		this.logger.trace("Failed to process authentication request", failed);
+		this.logger.trace("Cleared SecurityContextHolder");
+		this.logger.trace("Handling authentication failure");
+		//清除记住我
+		this.rememberMeServices.loginFail(request, response);
+		//失败回调，比如跳转到指定url，返回401等，可自定义
+		this.failureHandler.onAuthenticationFailure(request, response, failed);
+	}
+```
