@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"codelearny.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.3.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="starting">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="https://codelearny.github.io/page/2/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="starting">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="enjoyu">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://codelearny.github.io/page/2/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>Blog</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">dream</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="enjoyu"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">enjoyu</p>
+  <div class="site-description" itemprop="description">starting</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/codelearny" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;codelearny" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://codelearny.github.io/2021/03/08/Spring-Cache/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="enjoyu">
+      <meta itemprop="description" content="starting">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/08/Spring-Cache/" class="post-title-link" itemprop="url">Spring Cache</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-08 09:11:50" itemprop="dateCreated datePublished" datetime="2021-03-08T09:11:50+08:00">2021-03-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-19 20:50:29" itemprop="dateModified" datetime="2021-09-19T20:50:29+08:00">2021-09-19</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/Spring/Spring-Cache/" itemprop="url" rel="index"><span itemprop="name">Spring Cache</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Spring-Cache-设计原理"><a href="#Spring-Cache-设计原理" class="headerlink" title="Spring Cache 设计原理"></a>Spring Cache 设计原理</h1><h2 id="Spring-Cache-API"><a href="#Spring-Cache-API" class="headerlink" title="Spring Cache API"></a>Spring Cache API</h2><p><code>Spring Cache API</code> 相关接口位于<code>spring-context</code>包，相对路径<code>org.springframework.cache</code>下。<br>核心接口 <code>org.springframework.cache.Cache</code> 定义通用缓存操作的接口，<code>org.springframework.cache.CacheManager</code> 缓存管理核心SPI，允许检索命名缓存区域</p>
+<h3 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h3><p>该接口是对缓存操作的抽象，主要操作为 get put evict，可根据具体缓存实现对应方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Cache</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 缓存名称</span></span><br><span class="line">	<span class="function">String <span class="title">getName</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="comment">// 返回底层的缓存对象</span></span><br><span class="line">	<span class="function">Object <span class="title">getNativeCache</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="comment">// 返回缓存键对应的值，使用 ValueWrapper 接口包装</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function">ValueWrapper <span class="title">get</span><span class="params">(Object key)</span></span>;</span><br><span class="line">	<span class="comment">// 返回值自动转换为指定类型</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	&lt;T&gt; <span class="function">T <span class="title">get</span><span class="params">(Object key, <span class="meta">@Nullable</span> Class&lt;T&gt; type)</span></span>;</span><br><span class="line">	<span class="comment">// 用于同步查询缓存，同步保证由具体实现负责</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	&lt;T&gt; <span class="function">T <span class="title">get</span><span class="params">(Object key, Callable&lt;T&gt; valueLoader)</span></span>;</span><br><span class="line">	<span class="comment">// 放置缓存</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">put</span><span class="params">(Object key, <span class="meta">@Nullable</span> Object value)</span></span>;</span><br><span class="line">	<span class="comment">// 指定 key 不存在，放置新的 value 否则返回原有 value</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">default</span> ValueWrapper <span class="title">putIfAbsent</span><span class="params">(Object key, <span class="meta">@Nullable</span> Object value)</span> </span>&#123;</span><br><span class="line">		ValueWrapper existingValue = get(key);</span><br><span class="line">		<span class="keyword">if</span> (existingValue == <span class="keyword">null</span>) &#123;</span><br><span class="line">			put(key, value);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> existingValue;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 删除指定缓存</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">evict</span><span class="params">(Object key)</span></span>;</span><br><span class="line">	<span class="comment">// 删除指定缓存</span></span><br><span class="line">	<span class="function"><span class="keyword">default</span> <span class="keyword">boolean</span> <span class="title">evictIfPresent</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">		evict(key);</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 清空缓存</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="comment">// 清空缓存</span></span><br><span class="line">	<span class="function"><span class="keyword">default</span> <span class="keyword">boolean</span> <span class="title">invalidate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		clear();</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以 Redis 缓存实现为例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisCache</span> <span class="keyword">extends</span> <span class="title">AbstractValueAdaptingCache</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">byte</span>[] BINARY_NULL_VALUE = RedisSerializer.java().serialize(NullValue.INSTANCE);</span><br><span class="line">	<span class="comment">// 缓存名称</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line">	<span class="comment">// redis 操作的实现类</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> RedisCacheWriter cacheWriter;</span><br><span class="line">	<span class="comment">// reids 配置</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> RedisCacheConfiguration cacheConfig;</span><br><span class="line">	<span class="comment">// DefaultFormattingConversionService spring 提供的类型转换能力</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> ConversionService conversionService;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 实际查找实现</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> Object <span class="title">lookup</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 从 redis 中检索</span></span><br><span class="line">		<span class="keyword">byte</span>[] value = cacheWriter.get(name, createAndConvertCacheKey(key));</span><br><span class="line">		<span class="keyword">if</span> (value == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 反序列化</span></span><br><span class="line">		<span class="keyword">return</span> deserializeCacheValue(value);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 返回缓存名称</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 返回底层缓存实例</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> RedisCacheWriter <span class="title">getNativeCache</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.cacheWriter;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// get 实现，使用 synchronized 实现同步</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">synchronized</span> &lt;T&gt; <span class="function">T <span class="title">get</span><span class="params">(Object key, Callable&lt;T&gt; valueLoader)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 缓存中查询</span></span><br><span class="line">		ValueWrapper result = get(key);</span><br><span class="line">		<span class="comment">// 缓存命中直接返回</span></span><br><span class="line">		<span class="keyword">if</span> (result != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> (T) result.get();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 执行取值逻辑</span></span><br><span class="line">		T value = valueFromLoader(key, valueLoader);</span><br><span class="line">		<span class="comment">// 放置缓存</span></span><br><span class="line">		put(key, value);</span><br><span class="line">		<span class="keyword">return</span> value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// put 实现</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Object key, <span class="meta">@Nullable</span> Object value)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 空值处理</span></span><br><span class="line">		Object cacheValue = preProcessCacheValue(value);</span><br><span class="line">		<span class="keyword">if</span> (!isAllowNullValues() &amp;&amp; cacheValue == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(String.format(<span class="string">&quot;Cache &#x27;%s&#x27; does not allow &#x27;null&#x27; values. Avoid storing null via &#x27;@Cacheable(unless=\&quot;#result == null\&quot;)&#x27; or configure RedisCache to allow &#x27;null&#x27; via RedisCacheConfiguration.&quot;</span>, name));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// redis 操作</span></span><br><span class="line">		cacheWriter.put(name, createAndConvertCacheKey(key), serializeCacheValue(cacheValue), cacheConfig.getTtl());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// putIfAbsent 实现</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> ValueWrapper <span class="title">putIfAbsent</span><span class="params">(Object key, <span class="meta">@Nullable</span> Object value)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 空值处理</span></span><br><span class="line">		Object cacheValue = preProcessCacheValue(value);</span><br><span class="line">		<span class="keyword">if</span> (!isAllowNullValues() &amp;&amp; cacheValue == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> get(key);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// redis 操作</span></span><br><span class="line">		<span class="keyword">byte</span>[] result = cacheWriter.putIfAbsent(name, createAndConvertCacheKey(key), serializeCacheValue(cacheValue), cacheConfig.getTtl());</span><br><span class="line">		<span class="keyword">if</span> (result == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> SimpleValueWrapper(fromStoreValue(deserializeCacheValue(result)));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// evict 实现</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">evict</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// redis 操作</span></span><br><span class="line">		cacheWriter.remove(name, createAndConvertCacheKey(key));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// clear 实现</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 类型转换</span></span><br><span class="line">		<span class="keyword">byte</span>[] pattern = conversionService.convert(createCacheKey(<span class="string">&quot;*&quot;</span>), <span class="keyword">byte</span>[].class);</span><br><span class="line">		<span class="comment">// redis 操作</span></span><br><span class="line">		cacheWriter.clean(name, pattern);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CacheManager"><a href="#CacheManager" class="headerlink" title="CacheManager"></a>CacheManager</h3><p>缓存管理器抽象，根据具体缓存实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CacheManager</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 根据名称获得缓存实例</span></span><br><span class="line">	<span class="function">Cache <span class="title">getCache</span><span class="params">(String name)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 返回该缓存管理器下的所有缓存名称</span></span><br><span class="line">	<span class="function">Collection&lt;String&gt; <span class="title">getCacheNames</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以 Redis 缓存管理器为例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractCacheManager</span> <span class="keyword">implements</span> <span class="title">CacheManager</span>, <span class="title">InitializingBean</span> </span>&#123;	</span><br><span class="line">	<span class="comment">// 本地缓存 name -&gt; Cache</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> ConcurrentMap&lt;String, Cache&gt; cacheMap = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	<span class="comment">// 保存的缓存名称</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">volatile</span> Set&lt;String&gt; cacheNames = Collections.emptySet();</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Cache <span class="title">getCache</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 本地缓存命中直接返回</span></span><br><span class="line">		Cache cache = <span class="keyword">this</span>.cacheMap.get(name);</span><br><span class="line">		<span class="keyword">if</span> (cache != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> cache;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 子类实现，创建缓存实例</span></span><br><span class="line">		Cache missingCache = getMissingCache(name);</span><br><span class="line">		<span class="keyword">if</span> (missingCache != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="comment">// 创建操作同步</span></span><br><span class="line">			<span class="keyword">synchronized</span> (<span class="keyword">this</span>.cacheMap) &#123;</span><br><span class="line">				cache = <span class="keyword">this</span>.cacheMap.get(name);</span><br><span class="line">				<span class="keyword">if</span> (cache == <span class="keyword">null</span>) &#123;</span><br><span class="line">					cache = decorateCache(missingCache);</span><br><span class="line">					<span class="keyword">this</span>.cacheMap.put(name, cache);</span><br><span class="line">					updateCacheNames(name);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> cache;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisCacheManager</span> <span class="keyword">extends</span> <span class="title">AbstractTransactionSupportingCacheManager</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 创建缓存实例</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> RedisCache <span class="title">getMissingCache</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> allowInFlightCacheCreation ? createRedisCache(name, defaultCacheConfig) : <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 实例化 RedisCache</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> RedisCache <span class="title">createRedisCache</span><span class="params">(String name, <span class="meta">@Nullable</span> RedisCacheConfiguration cacheConfig)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> RedisCache(name, cacheWriter, cacheConfig != <span class="keyword">null</span> ? cacheConfig : defaultCacheConfig);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="缓存注解原理"><a href="#缓存注解原理" class="headerlink" title="缓存注解原理"></a>缓存注解原理</h2><h3 id="EnableCaching"><a href="#EnableCaching" class="headerlink" title="@EnableCaching"></a>@EnableCaching</h3><p>使用<code>@EnableCaching</code> 可以开启注解支持，该注解导入了一个<code>CachingConfigurationSelector</code>，根据注解的mode属性，导入相应的配置类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Import(CachingConfigurationSelector.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> EnableCaching &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 指定代理类型，mode()设置为AdviceMode.PROXY时生效，影响所有Spring管理的Bean，默认使用jdk动态代理，true代表使用CGLIB代理</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">proxyTargetClass</span><span class="params">()</span> <span class="keyword">default</span> <span class="keyword">false</span></span>;</span><br><span class="line">      </span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 指定缓存如何生效，默认使用动态代理方式，可升级为静态织入AdviceMode.ASPECTJ</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function">AdviceMode <span class="title">mode</span><span class="params">()</span> <span class="keyword">default</span> AdviceMode.PROXY</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 指定缓存相关通知的执行顺序，当连接点存在多个通知时</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">order</span><span class="params">()</span> <span class="keyword">default</span> Ordered.LOWEST_PRECEDENCE</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CachingConfigurationSelector"><a href="#CachingConfigurationSelector" class="headerlink" title="CachingConfigurationSelector"></a>CachingConfigurationSelector</h3><p><code>CachingConfigurationSelector</code>实现了<code>ImportSelector</code>接口，可以获得注解元数据，根据元数据导入对应配置类。<br>默认导入<code>AutoProxyRegistrar</code>和<code>ProxyCachingConfiguration</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CachingConfigurationSelector</span> <span class="keyword">extends</span> <span class="title">AdviceModeImportSelector</span>&lt;<span class="title">EnableCaching</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PROXY_JCACHE_CONFIGURATION_CLASS =	<span class="string">&quot;org.springframework.cache.jcache.config.ProxyJCacheConfiguration&quot;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CACHE_ASPECT_CONFIGURATION_CLASS_NAME = <span class="string">&quot;org.springframework.cache.aspectj.AspectJCachingConfiguration&quot;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String JCACHE_ASPECT_CONFIGURATION_CLASS_NAME =	<span class="string">&quot;org.springframework.cache.aspectj.AspectJJCacheConfiguration&quot;</span>;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// jsr-107规范</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> jsr107Present;</span><br><span class="line">   <span class="comment">// jcache实现</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> jcacheImplPresent;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		ClassLoader classLoader = CachingConfigurationSelector.class.getClassLoader();</span><br><span class="line">		jsr107Present = ClassUtils.isPresent(<span class="string">&quot;javax.cache.Cache&quot;</span>, classLoader);</span><br><span class="line">		jcacheImplPresent = ClassUtils.isPresent(PROXY_JCACHE_CONFIGURATION_CLASS, classLoader);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 根据mode决定导入的类</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> String[] selectImports(AdviceMode adviceMode) &#123;</span><br><span class="line">		<span class="keyword">switch</span> (adviceMode) &#123;</span><br><span class="line">			<span class="keyword">case</span> PROXY:</span><br><span class="line">				<span class="keyword">return</span> getProxyImports();</span><br><span class="line">			<span class="keyword">case</span> ASPECTJ:</span><br><span class="line">				<span class="keyword">return</span> getAspectJImports();</span><br><span class="line">			<span class="keyword">default</span>:</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 导入 `AutoProxyRegistrar` 和 `ProxyCachingConfiguration`</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">private</span> String[] getProxyImports() &#123;</span><br><span class="line">		List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;(<span class="number">3</span>);</span><br><span class="line">		result.add(AutoProxyRegistrar.class.getName());</span><br><span class="line">		result.add(ProxyCachingConfiguration.class.getName());</span><br><span class="line">		<span class="comment">// 根据对应类是否存在判断是否加载jsr规范的自动配置类</span></span><br><span class="line">		<span class="keyword">if</span> (jsr107Present &amp;&amp; jcacheImplPresent) &#123;</span><br><span class="line">			result.add(PROXY_JCACHE_CONFIGURATION_CLASS);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> StringUtils.toStringArray(result);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * AdviceMode#ASPECTJ 配置类</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">private</span> String[] getAspectJImports() &#123;</span><br><span class="line">		List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;(<span class="number">2</span>);</span><br><span class="line">		result.add(CACHE_ASPECT_CONFIGURATION_CLASS_NAME);</span><br><span class="line">		<span class="keyword">if</span> (jsr107Present &amp;&amp; jcacheImplPresent) &#123;</span><br><span class="line">			result.add(JCACHE_ASPECT_CONFIGURATION_CLASS_NAME);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> StringUtils.toStringArray(result);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="AutoProxyRegistrar"><a href="#AutoProxyRegistrar" class="headerlink" title="AutoProxyRegistrar"></a><code>AutoProxyRegistrar</code></h3><p>自动代理创建器注册器，用于在容器中注册一个<code>AbstractAutoProxyCreator</code>，通常是<code>AnnotationAwareAspectJAutoProxyCreator</code>，它是一个<code>SmartInstantiationAwareBeanPostProcessor</code>，在bean注入或者初始化化之后返回代理后的实例。构造代理对象时，会从容器中查找符合条件的通知器<code>Advisor</code>应用到代理对象，从而实现缓存相关功能的实现。</p>
+<h3 id="ProxyCachingConfiguration-extends-AbstractCachingConfiguration"><a href="#ProxyCachingConfiguration-extends-AbstractCachingConfiguration" class="headerlink" title="ProxyCachingConfiguration extends AbstractCachingConfiguration"></a><code>ProxyCachingConfiguration</code> extends <code>AbstractCachingConfiguration</code></h3><p>缓存代理功能组件配置，主要实现以下功能</p>
+<ol>
+<li>注入<code>CachingConfigurer</code></li>
+<li>声明<code>AnnotationCacheOperationSource</code></li>
+<li>声明<code>CacheInterceptor</code></li>
+<li>声明<code>BeanFactoryCacheOperationSourceAdvisor</code></li>
+</ol>
+<h4 id="CachingConfigurer"><a href="#CachingConfigurer" class="headerlink" title="CachingConfigurer"></a>CachingConfigurer</h4><p>缓存配置自定义，可实现该接口自定义缓存相关的<code>CacheManager</code>，<code>CacheResolver</code>，<code>KeyGenerator</code>，<code>CacheErrorHandler</code>，也可以继承<code>CachingConfigurerSupport</code>，选择实现部分功能</p>
+<h4 id="AnnotationCacheOperationSource"><a href="#AnnotationCacheOperationSource" class="headerlink" title="AnnotationCacheOperationSource"></a>AnnotationCacheOperationSource</h4><p>实现接口<code>CacheOperationSource</code>，给<code>CacheInterceptor</code>拦截器提供缓存操作所需的属性，该实现类从<code>Spring</code>缓存相关注解中读取元数据，默认内置<code>SpringCacheAnnotationParser</code>从方法或类上解析注解的元数据并缓存</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationCacheOperationSource</span> <span class="keyword">extends</span> <span class="title">AbstractFallbackCacheOperationSource</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">   <span class="comment">// 标识只支持public方法</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">boolean</span> publicMethodsOnly;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;CacheAnnotationParser&gt; annotationParsers;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 默认构造方法，只支持public方法</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">AnnotationCacheOperationSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>(<span class="keyword">true</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 默认使用 SpringCacheAnnotationParser 注解解析器</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">AnnotationCacheOperationSource</span><span class="params">(<span class="keyword">boolean</span> publicMethodsOnly)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.publicMethodsOnly = publicMethodsOnly;</span><br><span class="line">		<span class="keyword">this</span>.annotationParsers = Collections.singleton(<span class="keyword">new</span> SpringCacheAnnotationParser());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">AnnotationCacheOperationSource</span><span class="params">(CacheAnnotationParser annotationParser)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.publicMethodsOnly = <span class="keyword">true</span>;</span><br><span class="line">		Assert.notNull(annotationParser, <span class="string">&quot;CacheAnnotationParser must not be null&quot;</span>);</span><br><span class="line">		<span class="keyword">this</span>.annotationParsers = Collections.singleton(annotationParser);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">AnnotationCacheOperationSource</span><span class="params">(CacheAnnotationParser... annotationParsers)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.publicMethodsOnly = <span class="keyword">true</span>;</span><br><span class="line">		Assert.notEmpty(annotationParsers, <span class="string">&quot;At least one CacheAnnotationParser needs to be specified&quot;</span>);</span><br><span class="line">		<span class="keyword">this</span>.annotationParsers = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(Arrays.asList(annotationParsers));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">AnnotationCacheOperationSource</span><span class="params">(Set&lt;CacheAnnotationParser&gt; annotationParsers)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.publicMethodsOnly = <span class="keyword">true</span>;</span><br><span class="line">		Assert.notEmpty(annotationParsers, <span class="string">&quot;At least one CacheAnnotationParser needs to be specified&quot;</span>);</span><br><span class="line">		<span class="keyword">this</span>.annotationParsers = annotationParsers;</span><br><span class="line">	&#125;</span><br><span class="line">   <span class="comment">// 判断注解解析器是否支持指定类</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isCandidateClass</span><span class="params">(Class&lt;?&gt; targetClass)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (CacheAnnotationParser parser : <span class="keyword">this</span>.annotationParsers) &#123;</span><br><span class="line">			<span class="keyword">if</span> (parser.isCandidateClass(targetClass)) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">   <span class="comment">// 解析类，委托解析器执行</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> Collection&lt;CacheOperation&gt; <span class="title">findCacheOperations</span><span class="params">(Class&lt;?&gt; clazz)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> determineCacheOperations(parser -&gt; parser.parseCacheAnnotations(clazz));</span><br><span class="line">	&#125;</span><br><span class="line">   <span class="comment">// 解析方法，委托解析器执行</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> Collection&lt;CacheOperation&gt; <span class="title">findCacheOperations</span><span class="params">(Method method)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> determineCacheOperations(parser -&gt; parser.parseCacheAnnotations(method));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 通过解析器分析注解信息，封装为 CacheOperation 元数据类</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> Collection&lt;CacheOperation&gt; <span class="title">determineCacheOperations</span><span class="params">(CacheOperationProvider provider)</span> </span>&#123;</span><br><span class="line">		Collection&lt;CacheOperation&gt; ops = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">for</span> (CacheAnnotationParser parser : <span class="keyword">this</span>.annotationParsers) &#123;</span><br><span class="line">			Collection&lt;CacheOperation&gt; annOps = provider.getCacheOperations(parser);</span><br><span class="line">			<span class="keyword">if</span> (annOps != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (ops == <span class="keyword">null</span>) &#123;</span><br><span class="line">					ops = annOps;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> &#123;</span><br><span class="line">					Collection&lt;CacheOperation&gt; combined = <span class="keyword">new</span> ArrayList&lt;&gt;(ops.size() + annOps.size());</span><br><span class="line">					combined.addAll(ops);</span><br><span class="line">					combined.addAll(annOps);</span><br><span class="line">					ops = combined;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ops;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>实际的解析动作由<code>SpringCacheAnnotationParser</code>完成，解析对应注解上的属性，封装为<code>CacheableOperation</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringCacheAnnotationParser</span> <span class="keyword">implements</span> <span class="title">CacheAnnotationParser</span>, <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 支持的缓存操作注解</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Set&lt;Class&lt;? extends Annotation&gt;&gt; CACHE_OPERATION_ANNOTATIONS = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="number">8</span>);</span><br><span class="line">	<span class="comment">// 初始化支持的操作注解</span></span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		CACHE_OPERATION_ANNOTATIONS.add(Cacheable.class);</span><br><span class="line">		CACHE_OPERATION_ANNOTATIONS.add(CacheEvict.class);</span><br><span class="line">		CACHE_OPERATION_ANNOTATIONS.add(CachePut.class);</span><br><span class="line">		CACHE_OPERATION_ANNOTATIONS.add(Caching.class);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 分析目标类上是否有指定的注解</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isCandidateClass</span><span class="params">(Class&lt;?&gt; targetClass)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> AnnotationUtils.isCandidateClass(targetClass, CACHE_OPERATION_ANNOTATIONS);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 分析类</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Collection&lt;CacheOperation&gt; <span class="title">parseCacheAnnotations</span><span class="params">(Class&lt;?&gt; type)</span> </span>&#123;</span><br><span class="line">		DefaultCacheConfig defaultConfig = <span class="keyword">new</span> DefaultCacheConfig(type);</span><br><span class="line">		<span class="keyword">return</span> parseCacheAnnotations(defaultConfig, type);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 分析方法，如果类上使用了 `@CacheConfig` 可设置类级别的默认设置</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Collection&lt;CacheOperation&gt; <span class="title">parseCacheAnnotations</span><span class="params">(Method method)</span> </span>&#123;</span><br><span class="line">		DefaultCacheConfig defaultConfig = <span class="keyword">new</span> DefaultCacheConfig(method.getDeclaringClass());</span><br><span class="line">		<span class="keyword">return</span> parseCacheAnnotations(defaultConfig, method);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 解析缓存注解</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> Collection&lt;CacheOperation&gt; <span class="title">parseCacheAnnotations</span><span class="params">(DefaultCacheConfig cachingConfig, AnnotatedElement ae)</span> </span>&#123;</span><br><span class="line">		Collection&lt;CacheOperation&gt; ops = parseCacheAnnotations(cachingConfig, ae, <span class="keyword">false</span>);</span><br><span class="line">		<span class="keyword">if</span> (ops != <span class="keyword">null</span> &amp;&amp; ops.size() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="comment">// 解析出多个注解，本类的覆盖接口上的</span></span><br><span class="line">			Collection&lt;CacheOperation&gt; localOps = parseCacheAnnotations(cachingConfig, ae, <span class="keyword">true</span>);</span><br><span class="line">			<span class="keyword">if</span> (localOps != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> localOps;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ops;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 解析缓存注解， localOnly 指示是否本类优先</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> Collection&lt;CacheOperation&gt; <span class="title">parseCacheAnnotations</span><span class="params">(DefaultCacheConfig cachingConfig, AnnotatedElement ae, <span class="keyword">boolean</span> localOnly)</span> </span>&#123;</span><br><span class="line">		Collection&lt;? extends Annotation&gt; anns = (localOnly ?</span><br><span class="line">				<span class="comment">// 不向上递归查找</span></span><br><span class="line">				AnnotatedElementUtils.getAllMergedAnnotations(ae, CACHE_OPERATION_ANNOTATIONS) :</span><br><span class="line">				<span class="comment">// 递归查找</span></span><br><span class="line">				AnnotatedElementUtils.findAllMergedAnnotations(ae, CACHE_OPERATION_ANNOTATIONS));</span><br><span class="line">		<span class="keyword">if</span> (anns.isEmpty()) &#123;</span><br><span class="line">			<span class="comment">// 没有找到注解直接返回null</span></span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">final</span> Collection&lt;CacheOperation&gt; ops = <span class="keyword">new</span> ArrayList&lt;&gt;(<span class="number">1</span>);</span><br><span class="line">		<span class="comment">// 解析Cacheable</span></span><br><span class="line">		anns.stream().filter(ann -&gt; ann <span class="keyword">instanceof</span> Cacheable).forEach(ann -&gt; ops.add(parseCacheableAnnotation(ae, cachingConfig, (Cacheable) ann)));</span><br><span class="line">		<span class="comment">// 解析CacheEvict</span></span><br><span class="line">		anns.stream().filter(ann -&gt; ann <span class="keyword">instanceof</span> CacheEvict).forEach(ann -&gt; ops.add(parseEvictAnnotation(ae, cachingConfig, (CacheEvict) ann)));</span><br><span class="line">		<span class="comment">// 解析CachePut</span></span><br><span class="line">		anns.stream().filter(ann -&gt; ann <span class="keyword">instanceof</span> CachePut).forEach(ann -&gt; ops.add(parsePutAnnotation(ae, cachingConfig, (CachePut) ann)));</span><br><span class="line">		<span class="comment">// 解析Caching</span></span><br><span class="line">		anns.stream().filter(ann -&gt; ann <span class="keyword">instanceof</span> Caching).forEach(ann -&gt; parseCachingAnnotation(ae, cachingConfig, (Caching) ann, ops));</span><br><span class="line">		<span class="keyword">return</span> ops;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 注解属性大部分一样，使用建造者模式</span></span><br><span class="line">	<span class="comment">// cacheNames 缓存名</span></span><br><span class="line">	<span class="comment">// condition 条件 SpEL表达式</span></span><br><span class="line">	<span class="comment">// unless 否决 SpEL表达式</span></span><br><span class="line">	<span class="comment">// key 缓存键 SpEL表达式 不可同时指定 key 和 keyGenerator</span></span><br><span class="line">	<span class="comment">// keyGenerator 缓存键生成器的bean名称</span></span><br><span class="line">	<span class="comment">// cacheManager 缓存管理器 不可同时指定 cacheManager 和 cacheResolver</span></span><br><span class="line">	<span class="comment">// cacheResolver 缓存解析器</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> CacheableOperation <span class="title">parseCacheableAnnotation</span><span class="params">(AnnotatedElement ae, DefaultCacheConfig defaultConfig, Cacheable cacheable)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		CacheableOperation.Builder builder = <span class="keyword">new</span> CacheableOperation.Builder();</span><br><span class="line"></span><br><span class="line">		builder.setName(ae.toString());</span><br><span class="line">		builder.setCacheNames(cacheable.cacheNames());</span><br><span class="line">		builder.setCondition(cacheable.condition());</span><br><span class="line">		builder.setUnless(cacheable.unless());</span><br><span class="line">		builder.setKey(cacheable.key());</span><br><span class="line">		builder.setKeyGenerator(cacheable.keyGenerator());</span><br><span class="line">		builder.setCacheManager(cacheable.cacheManager());</span><br><span class="line">		builder.setCacheResolver(cacheable.cacheResolver());</span><br><span class="line">		builder.setSync(cacheable.sync());</span><br><span class="line"></span><br><span class="line">		defaultConfig.applyDefault(builder);</span><br><span class="line">		CacheableOperation op = builder.build();</span><br><span class="line">		validateCacheOperation(ae, op);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> op;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> CacheEvictOperation <span class="title">parseEvictAnnotation</span><span class="params">(AnnotatedElement ae, DefaultCacheConfig defaultConfig, CacheEvict cacheEvict)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		CacheEvictOperation.Builder builder = <span class="keyword">new</span> CacheEvictOperation.Builder();</span><br><span class="line"></span><br><span class="line">		builder.setName(ae.toString());</span><br><span class="line">		builder.setCacheNames(cacheEvict.cacheNames());</span><br><span class="line">		builder.setCondition(cacheEvict.condition());</span><br><span class="line">		builder.setKey(cacheEvict.key());</span><br><span class="line">		builder.setKeyGenerator(cacheEvict.keyGenerator());</span><br><span class="line">		builder.setCacheManager(cacheEvict.cacheManager());</span><br><span class="line">		builder.setCacheResolver(cacheEvict.cacheResolver());</span><br><span class="line">		builder.setCacheWide(cacheEvict.allEntries());</span><br><span class="line">		builder.setBeforeInvocation(cacheEvict.beforeInvocation());</span><br><span class="line"></span><br><span class="line">		defaultConfig.applyDefault(builder);</span><br><span class="line">		CacheEvictOperation op = builder.build();</span><br><span class="line">		validateCacheOperation(ae, op);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> op;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> CacheOperation <span class="title">parsePutAnnotation</span><span class="params">(AnnotatedElement ae, DefaultCacheConfig defaultConfig, CachePut cachePut)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		CachePutOperation.Builder builder = <span class="keyword">new</span> CachePutOperation.Builder();</span><br><span class="line"></span><br><span class="line">		builder.setName(ae.toString());</span><br><span class="line">		builder.setCacheNames(cachePut.cacheNames());</span><br><span class="line">		builder.setCondition(cachePut.condition());</span><br><span class="line">		builder.setUnless(cachePut.unless());</span><br><span class="line">		builder.setKey(cachePut.key());</span><br><span class="line">		builder.setKeyGenerator(cachePut.keyGenerator());</span><br><span class="line">		builder.setCacheManager(cachePut.cacheManager());</span><br><span class="line">		builder.setCacheResolver(cachePut.cacheResolver());</span><br><span class="line"></span><br><span class="line">		defaultConfig.applyDefault(builder);</span><br><span class="line">		CachePutOperation op = builder.build();</span><br><span class="line">		validateCacheOperation(ae, op);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> op;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 复合注解 分别解析</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">parseCachingAnnotation</span><span class="params">(AnnotatedElement ae, DefaultCacheConfig defaultConfig, Caching caching, Collection&lt;CacheOperation&gt; ops)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		Cacheable[] cacheables = caching.cacheable();</span><br><span class="line">		<span class="keyword">for</span> (Cacheable cacheable : cacheables) &#123;</span><br><span class="line">			ops.add(parseCacheableAnnotation(ae, defaultConfig, cacheable));</span><br><span class="line">		&#125;</span><br><span class="line">		CacheEvict[] cacheEvicts = caching.evict();</span><br><span class="line">		<span class="keyword">for</span> (CacheEvict cacheEvict : cacheEvicts) &#123;</span><br><span class="line">			ops.add(parseEvictAnnotation(ae, defaultConfig, cacheEvict));</span><br><span class="line">		&#125;</span><br><span class="line">		CachePut[] cachePuts = caching.put();</span><br><span class="line">		<span class="keyword">for</span> (CachePut cachePut : cachePuts) &#123;</span><br><span class="line">			ops.add(parsePutAnnotation(ae, defaultConfig, cachePut));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="CacheInterceptor"><a href="#CacheInterceptor" class="headerlink" title="CacheInterceptor"></a>CacheInterceptor</h4><p>实现AOP联盟接口<code>MethodInterceptor</code>，用于使用通用<code>Spring</code>缓存基础结构的声明式缓存管理。继承自<code>CacheAspectSupport</code>，包含了与<code>Spring</code>底层缓存API的集成。<br>主要操作流程在 <code>CacheAspectSupport.execute</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheInterceptor</span> <span class="keyword">extends</span> <span class="title">CacheAspectSupport</span> <span class="keyword">implements</span> <span class="title">MethodInterceptor</span>, <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(<span class="keyword">final</span> MethodInvocation invocation)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">		Method method = invocation.getMethod();</span><br><span class="line"></span><br><span class="line">		CacheOperationInvoker aopAllianceInvoker = () -&gt; &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="comment">// 调用 MethodInvocation 处理</span></span><br><span class="line">				<span class="keyword">return</span> invocation.proceed();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">catch</span> (Throwable ex) &#123;</span><br><span class="line">				<span class="keyword">throw</span> <span class="keyword">new</span> CacheOperationInvoker.ThrowableWrapper(ex);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">// 调用CacheAspectSupport.execute</span></span><br><span class="line">			<span class="keyword">return</span> execute(aopAllianceInvoker, invocation.getThis(), method, invocation.getArguments());</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (CacheOperationInvoker.ThrowableWrapper th) &#123;</span><br><span class="line">			<span class="keyword">throw</span> th.getOriginal();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>CacheAspectSupport</code>，该类包含与<code>Spring</code>底层缓存API的集成，使用策略设计模式。<code>CacheOperationSource</code>用于确定缓存操作，<code>KeyGenerator</code>将构建缓存键，<code>CacheResolver</code>将解析要使用的实际缓存。<code>BeanFactoryAware</code>接口自动注入<code>BeanFactory</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheAspectSupport</span> <span class="keyword">extends</span> <span class="title">AbstractCacheInvoker</span></span></span><br><span class="line"><span class="class">		<span class="keyword">implements</span> <span class="title">BeanFactoryAware</span>, <span class="title">InitializingBean</span>, <span class="title">SmartInitializingSingleton</span> </span>&#123;</span><br><span class="line">	<span class="comment">// CacheOperation 元数据的缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;CacheOperationCacheKey, CacheOperationMetadata&gt; metadataCache = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">1024</span>);</span><br><span class="line">	<span class="comment">// SpEL表达式解析的工具类</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> CacheOperationExpressionEvaluator evaluator = <span class="keyword">new</span> CacheOperationExpressionEvaluator();</span><br><span class="line">	<span class="comment">// 此处可配置为 CompositeCacheOperationSource ，用于迭代多个 CacheOperationSource</span></span><br><span class="line">	<span class="comment">// 自动配置类自动注入 AnnotationCacheOperationSource</span></span><br><span class="line">	<span class="keyword">private</span> CacheOperationSource cacheOperationSource;</span><br><span class="line">	<span class="comment">// 缓存键生成器，可通过 CachingConfigurer 自定义</span></span><br><span class="line">	<span class="keyword">private</span> SingletonSupplier&lt;KeyGenerator&gt; keyGenerator = SingletonSupplier.of(SimpleKeyGenerator::<span class="keyword">new</span>);</span><br><span class="line">	<span class="comment">// 缓存操作解析类，根据缓存操作上下文确定缓存实例</span></span><br><span class="line">	<span class="keyword">private</span> SingletonSupplier&lt;CacheResolver&gt; cacheResolver;</span><br><span class="line">	<span class="comment">// 自动注入bean工厂</span></span><br><span class="line">	<span class="keyword">private</span> BeanFactory beanFactory;</span><br><span class="line">	<span class="comment">// 标识 是否初始化，在 SmartInitializingSingleton.afterSingletonsInstantiated 声明周期函数中置为 true</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> initialized = <span class="keyword">false</span>;</span><br><span class="line">	<span class="comment">// </span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> Object <span class="title">execute</span><span class="params">(CacheOperationInvoker invoker, Object target, Method method, Object[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>.initialized) &#123;</span><br><span class="line">			<span class="comment">// 拿到代理类的最终目标类</span></span><br><span class="line">			Class&lt;?&gt; targetClass = getTargetClass(target);</span><br><span class="line">			<span class="comment">// 得到 AnnotationCacheOperationSource</span></span><br><span class="line">			CacheOperationSource cacheOperationSource = getCacheOperationSource();</span><br><span class="line">			<span class="keyword">if</span> (cacheOperationSource != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="comment">// 解析方法上的 缓存操作注解，封装为 CacheOperation</span></span><br><span class="line">				Collection&lt;CacheOperation&gt; operations = cacheOperationSource.getCacheOperations(method, targetClass);</span><br><span class="line">				<span class="keyword">if</span> (!CollectionUtils.isEmpty(operations)) &#123;</span><br><span class="line">					<span class="comment">// 相关操作封装为 CacheOperationContexts 上下文</span></span><br><span class="line">					<span class="keyword">return</span> execute(invoker, method,	<span class="keyword">new</span> CacheOperationContexts(operations, method, args, target, targetClass));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> invoker.invoke();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// </span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> Object <span class="title">execute</span><span class="params">(<span class="keyword">final</span> CacheOperationInvoker invoker, Method method, CacheOperationContexts contexts)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 多线程同步调用</span></span><br><span class="line">		<span class="keyword">if</span> (contexts.isSynchronized()) &#123;</span><br><span class="line">			CacheOperationContext context = contexts.get(CacheableOperation.class).iterator().next();</span><br><span class="line">			<span class="comment">// 计算 condition 表达式 是否通过</span></span><br><span class="line">			<span class="keyword">if</span> (isConditionPassing(context, CacheOperationExpressionEvaluator.NO_RESULT)) &#123;</span><br><span class="line">				<span class="comment">// 生成缓存key</span></span><br><span class="line">				Object key = generateKey(context, CacheOperationExpressionEvaluator.NO_RESULT);</span><br><span class="line">				<span class="comment">// 通过 CacheResolver 解析缓存，默认使用注解配置的 cacheNames 通过 CacheManager.getCache 得到</span></span><br><span class="line">				Cache cache = context.getCaches().iterator().next();</span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					<span class="comment">// invoker 执行原始方法，得到返回值，调用具体的 Cache 实现缓存操作，同步操作由具体实现负责</span></span><br><span class="line">					<span class="comment">// 方法返回值支持 Optional</span></span><br><span class="line">					<span class="keyword">return</span> wrapCacheValue(method, handleSynchronizedGet(invoker, key, cache));</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">catch</span> (Cache.ValueRetrievalException ex) &#123;</span><br><span class="line">					<span class="comment">// Directly propagate ThrowableWrapper from the invoker,</span></span><br><span class="line">					<span class="comment">// or potentially also an IllegalArgumentException etc.</span></span><br><span class="line">					ReflectionUtils.rethrowRuntimeException(ex.getCause());</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 无需缓存，直接调用底层方法</span></span><br><span class="line">				<span class="keyword">return</span> invokeOperation(invoker);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 执行方法调用前的缓存清理， CacheEvict 注解 beforeInvocation 设置为 true</span></span><br><span class="line">		processCacheEvicts(contexts.get(CacheEvictOperation.class), <span class="keyword">true</span>, CacheOperationExpressionEvaluator.NO_RESULT);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 检查是否命中 Cacheable 缓存</span></span><br><span class="line">		Cache.ValueWrapper cacheHit = findCachedItem(contexts.get(CacheableOperation.class));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Cacheable 缓存未命中， 收集需要放置到缓存的操作</span></span><br><span class="line">		List&lt;CachePutRequest&gt; cachePutRequests = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">		<span class="keyword">if</span> (cacheHit == <span class="keyword">null</span>) &#123;</span><br><span class="line">			collectPutRequests(contexts.get(CacheableOperation.class), CacheOperationExpressionEvaluator.NO_RESULT, cachePutRequests);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		Object cacheValue;</span><br><span class="line">		Object returnValue;</span><br><span class="line">		<span class="comment">// Cacheable 缓存命中， 并且没有生效的 CachePut</span></span><br><span class="line">		<span class="keyword">if</span> (cacheHit != <span class="keyword">null</span> &amp;&amp; !hasCachePut(contexts)) &#123;</span><br><span class="line">			<span class="comment">// 直接使用命中的缓存值</span></span><br><span class="line">			cacheValue = cacheHit.get();</span><br><span class="line">			returnValue = wrapCacheValue(method, cacheValue);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 执行目标方法获得返回值</span></span><br><span class="line">			returnValue = invokeOperation(invoker);</span><br><span class="line">			cacheValue = unwrapReturnValue(returnValue);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 收集显示的 CachePut 操作</span></span><br><span class="line">		collectPutRequests(contexts.get(CachePutOperation.class), cacheValue, cachePutRequests);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 执行收集后的缓存放置操作</span></span><br><span class="line">		<span class="keyword">for</span> (CachePutRequest cachePutRequest : cachePutRequests) &#123;</span><br><span class="line">			cachePutRequest.apply(cacheValue);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 执行方法调用前的缓存清理， CacheEvict 注解 beforeInvocation 设置为 false</span></span><br><span class="line">		processCacheEvicts(contexts.get(CacheEvictOperation.class), <span class="keyword">false</span>, cacheValue);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> returnValue;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="BeanFactoryCacheOperationSourceAdvisor"><a href="#BeanFactoryCacheOperationSourceAdvisor" class="headerlink" title="BeanFactoryCacheOperationSourceAdvisor"></a>BeanFactoryCacheOperationSourceAdvisor</h4><p>见名知意，通知器，提供BeanFactory能力，CacheOperationSource能力，通知器主要能力由<code>AbstractBeanFactoryPointcutAdvisor</code>提供，提供切面实现<code>CacheOperationSourcePointcut</code>，再委托给<code>AnnotationCacheOperationSource</code>解析是否存在缓存相关注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BeanFactoryCacheOperationSourceAdvisor</span> <span class="keyword">extends</span> <span class="title">AbstractBeanFactoryPointcutAdvisor</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 自动配置注入 AnnotationCacheOperationSource</span></span><br><span class="line">	<span class="keyword">private</span> CacheOperationSource cacheOperationSource;</span><br><span class="line">	<span class="comment">// 类似适配器的功能，提供切面操作</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> CacheOperationSourcePointcut pointcut = <span class="keyword">new</span> CacheOperationSourcePointcut() &#123;</span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="meta">@Nullable</span></span><br><span class="line">		<span class="function"><span class="keyword">protected</span> CacheOperationSource <span class="title">getCacheOperationSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> cacheOperationSource;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCacheOperationSource</span><span class="params">(CacheOperationSource cacheOperationSource)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.cacheOperationSource = cacheOperationSource;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setClassFilter</span><span class="params">(ClassFilter classFilter)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.pointcut.setClassFilter(classFilter);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Pointcut <span class="title">getPointcut</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.pointcut;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>AbstractBeanFactoryPointcutAdvisor</code>是一个<code>PointcutAdvisor</code>，由切面驱动的通知器，实现了<code>BeanFactoryAware</code>接口提供bean工厂的能力，允许将任何<code>Advice</code>配置为<code>BeanFactory</code>中的bean。指定bean的名称可以减少初始化的耦合，在切入点实际匹配之前不初始化<code>Advice</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractBeanFactoryPointcutAdvisor</span> <span class="keyword">extends</span> <span class="title">AbstractPointcutAdvisor</span> <span class="keyword">implements</span> <span class="title">BeanFactoryAware</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 通知bean的名称，用于从 BeanFactory 中获取通知</span></span><br><span class="line">	<span class="keyword">private</span> String adviceBeanName;</span><br><span class="line">	<span class="comment">// BeanFactoryAware 提供</span></span><br><span class="line">	<span class="keyword">private</span> BeanFactory beanFactory;</span><br><span class="line">	<span class="comment">// 通知</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">transient</span> <span class="keyword">volatile</span> Advice advice;</span><br><span class="line">	<span class="comment">// advice 的监视器对象，用于同步</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">transient</span> <span class="keyword">volatile</span> Object adviceMonitor = <span class="keyword">new</span> Object();</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 直接指定通知实例，使用时无需从bean工厂查找</span></span><br><span class="line"><span class="comment">	 * 自动配置直接设置 CacheInterceptor</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAdvice</span><span class="params">(Advice advice)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">synchronized</span> (<span class="keyword">this</span>.adviceMonitor) &#123;</span><br><span class="line">			<span class="keyword">this</span>.advice = advice;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 自动配置直接获取 CacheInterceptor</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Advice <span class="title">getAdvice</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Advice advice = <span class="keyword">this</span>.advice;</span><br><span class="line">		<span class="keyword">if</span> (advice != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> advice;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//下略。。。</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Spring-Boot-自动配置"><a href="#Spring-Boot-自动配置" class="headerlink" title="Spring Boot 自动配置"></a>Spring Boot 自动配置</h2><p><code>Spring Boot</code>自动配置文件<code>spring-boot-autoconfigure-x.x.x.jar</code>中的 META-INF\spring.factories 可以找到缓存自动配置类<code>CacheAutoConfiguration</code>，在使用<code>@EnableCaching</code>注解后<br>开启</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration(proxyBeanMethods = false)</span></span><br><span class="line"><span class="meta">@ConditionalOnClass(CacheManager.class)</span></span><br><span class="line"><span class="meta">@ConditionalOnBean(CacheAspectSupport.class)</span></span><br><span class="line"><span class="meta">@ConditionalOnMissingBean(value = CacheManager.class, name = &quot;cacheResolver&quot;)</span></span><br><span class="line"><span class="meta">@EnableConfigurationProperties(CacheProperties.class)</span></span><br><span class="line"><span class="meta">@AutoConfigureAfter(&#123; CouchbaseDataAutoConfiguration.class, HazelcastAutoConfiguration.class, HibernateJpaAutoConfiguration.class, RedisAutoConfiguration.class &#125;)</span></span><br><span class="line"><span class="meta">@Import(&#123; CacheConfigurationImportSelector.class, CacheManagerEntityManagerFactoryDependsOnPostProcessor.class &#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheAutoConfiguration</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 自定义 CacheManager</span></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="meta">@ConditionalOnMissingBean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> CacheManagerCustomizers <span class="title">cacheManagerCustomizers</span><span class="params">(ObjectProvider&lt;CacheManagerCustomizer&lt;?&gt;&gt; customizers)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> CacheManagerCustomizers(customizers.orderedStream().collect(Collectors.toList()));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 确保 CacheManager 存在，如不存在提供可读性更好的异常提示</span></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> CacheManagerValidator <span class="title">cacheAutoConfigurationValidator</span><span class="params">(CacheProperties cacheProperties, ObjectProvider&lt;CacheManager&gt; cacheManager)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> CacheManagerValidator(cacheProperties, cacheManager);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// Spring data jpa 环境下，声明实体管理器工厂 依赖 cacheManager</span></span><br><span class="line">	<span class="meta">@ConditionalOnClass(LocalContainerEntityManagerFactoryBean.class)</span></span><br><span class="line">	<span class="meta">@ConditionalOnBean(AbstractEntityManagerFactoryBean.class)</span></span><br><span class="line">	<span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheManagerEntityManagerFactoryDependsOnPostProcessor</span> <span class="keyword">extends</span> <span class="title">EntityManagerFactoryDependsOnPostProcessor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		CacheManagerEntityManagerFactoryDependsOnPostProcessor() &#123;</span><br><span class="line">			<span class="keyword">super</span>(<span class="string">&quot;cacheManager&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 导入各种缓存类型对应的配置类</span></span><br><span class="line">	<span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheConfigurationImportSelector</span> <span class="keyword">implements</span> <span class="title">ImportSelector</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="keyword">public</span> String[] selectImports(AnnotationMetadata importingClassMetadata) &#123;</span><br><span class="line">			CacheType[] types = CacheType.values();</span><br><span class="line">			String[] imports = <span class="keyword">new</span> String[types.length];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; types.length; i++) &#123;</span><br><span class="line">				imports[i] = CacheConfigurations.getConfigurationClass(types[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> imports;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://codelearny.github.io/2021/01/16/Secure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="enjoyu">
+      <meta itemprop="description" content="starting">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/16/Secure/" class="post-title-link" itemprop="url">Secure</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-16 13:51:27" itemprop="dateCreated datePublished" datetime="2021-01-16T13:51:27+08:00">2021-01-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-19 20:50:29" itemprop="dateModified" datetime="2021-09-19T20:50:29+08:00">2021-09-19</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="网络安全–加密相关"><a href="#网络安全–加密相关" class="headerlink" title="网络安全–加密相关"></a>网络安全–加密相关</h1><h3 id="常见算法种类"><a href="#常见算法种类" class="headerlink" title="常见算法种类"></a>常见算法种类</h3><h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><blockquote>
+<p>对数据存储统一规则<br>  主要用途：</p>
+</blockquote>
+<ol>
+<li>字符集编码</li>
+<li>URL编码</li>
+<li>Base64编码<h4 id="摘要-Hash-Digest"><a href="#摘要-Hash-Digest" class="headerlink" title="摘要 Hash Digest"></a>摘要 Hash Digest</h4><blockquote>
+<p>对任意长度数据定长输出<br>主要用途：</p>
+</blockquote>
+</li>
+<li>验证数据是否被篡改</li>
+<li>hash表结构</li>
+<li>存储密码<h4 id="对称加密算法"><a href="#对称加密算法" class="headerlink" title="对称加密算法"></a>对称加密算法</h4><blockquote>
+<p>加密解密的key相同 主要用途</p>
+</blockquote>
+</li>
+<li>加密传输数据<h4 id="非对称加密算法"><a href="#非对称加密算法" class="headerlink" title="非对称加密算法"></a>非对称加密算法</h4><blockquote>
+<p>加密公钥，解密私钥  </p>
+</blockquote>
+</li>
+</ol>
+<p>  -&gt; https 加密传输对称加密密钥  </p>
+<blockquote>
+<p>加密私钥，解密公钥<br>  -&gt; 签名 –带有密钥的消息摘要 保证数据来源，验证是否篡改</p>
+</blockquote>
+<h4 id="数字证书"><a href="#数字证书" class="headerlink" title="数字证书"></a>数字证书</h4><blockquote>
+<p>以上技术的综合应用</p>
+</blockquote>
+<ol>
+<li>链式签名，根证书验证，防止中间人攻击</li>
+<li>证书中包含使用者公钥，签名，算法等信息，经过CA机构的私钥加密，作为签名</li>
+<li>使用CA机构的公钥解密签名，得到使用公钥</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://codelearny.github.io/2021/01/09/Play/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="enjoyu">
+      <meta itemprop="description" content="starting">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/09/Play/" class="post-title-link" itemprop="url">MarkDown 基本语法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-09 20:16:05" itemprop="dateCreated datePublished" datetime="2021-01-09T20:16:05+08:00">2021-01-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-19 20:50:29" itemprop="dateModified" datetime="2021-09-19T20:50:29+08:00">2021-09-19</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DB/" itemprop="url" rel="index"><span itemprop="name">DB</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DB/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/Spring/Spring-Boot/" itemprop="url" rel="index"><span itemprop="name">Spring Boot</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/Spring/Spring-Cloud/" itemprop="url" rel="index"><span itemprop="name">Spring Cloud</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JS/" itemprop="url" rel="index"><span itemprop="name">JS</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JS/Node/" itemprop="url" rel="index"><span itemprop="name">Node</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JS/VUE/" itemprop="url" rel="index"><span itemprop="name">VUE</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JS/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Network/" itemprop="url" rel="index"><span itemprop="name">Network</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Network/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Network/TCP-IP/" itemprop="url" rel="index"><span itemprop="name">TCP/IP</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><pre><code>大标题
+===
+小标题
+---
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题</code></pre>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><pre><code>&gt;this is a block
+&gt;&gt;this is another
+&gt;&gt;&gt;段落的换行两个空格加回车  
+或者直接用空行分开</code></pre>
+<blockquote>
+<p>this is a block</p>
+<blockquote>
+<p>this is another</p>
+<blockquote>
+<p>段落的换行两个空格加回车<br>或者直接用空行分开</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><pre><code>1. 有序列表只需要1开头
+20. 其他数字不影响顺序
+13. cccc
+* 无序列表
+    + 列表嵌套只需要加缩进
+        - ffff</code></pre>
+<ol>
+<li>有序列表只需要1开头</li>
+<li>其他数字不影响顺序</li>
+<li>cccc</li>
+</ol>
+<ul>
+<li>无序列表<ul>
+<li>列表嵌套只需要加缩进<ul>
+<li>ffff</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>缩进四个空格表示代码块</p>
+<pre><code>    //代码块</code></pre>
+<p>三个`表示代码块，js为代码语言</p>
+<pre>
+<code>```js</code>
+console.log('hello')
+<code>```</code>
+</pre>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><pre><code>***</code></pre>
+<hr>
+<pre><code>---</code></pre>
+<hr>
+<h3 id="字体效果"><a href="#字体效果" class="headerlink" title="字体效果"></a>字体效果</h3><pre><code>*斜体*  _斜体_</code></pre>
+<p><em>斜体</em>  <em>斜体</em></p>
+<pre><code>**粗体**  __粗体__</code></pre>
+<p><strong>粗体</strong>  <strong>粗体</strong></p>
+<pre><code>***粗体+斜体***</code></pre>
+<p><strong><em>粗体+斜体</em></strong></p>
+<pre><code>~~删除线~~</code></pre>
+<p><del>删除线</del></p>
+<pre><code>`阴影`</code></pre>
+<p><code>阴影</code></p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><pre><code>name|age|tall|address
+--|:--:|:--|--:
+默认|居中|左对齐|右对齐
+black|22|188|a</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th align="center">age</th>
+<th align="left">tall</th>
+<th align="right">address</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认</td>
+<td align="center">居中</td>
+<td align="left">左对齐</td>
+<td align="right">右对齐</td>
+</tr>
+<tr>
+<td>black</td>
+<td align="center">22</td>
+<td align="left">188</td>
+<td align="right">a</td>
+</tr>
+</tbody></table>
+<h3 id="图片与链接"><a href="#图片与链接" class="headerlink" title="图片与链接"></a>图片与链接</h3><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p>链接定义 <code>\[内容\](地址 &quot;标题&quot;)</code><br>也可以直接用<code>&lt;地址&gt;</code></p>
+<pre><code>[example](https://codelearny.github.io/ &quot;the description of this site&quot;) with description.
+[example](https://codelearny.github.io/) without title attribute.
+&lt;https://codelearny.github.io/&gt;</code></pre>
+<p><a href="https://codelearny.github.io/" title="the description of this site">example</a> with description.<br><a href="https://codelearny.github.io/">example</a> without title attribute.<br><a href="https://codelearny.github.io/">https://codelearny.github.io/</a></p>
+<p>可以将链接地址设为变量<code>[标识]:地址 &quot;标题&quot;</code><br>定义时直接引用<code>[内容][标识]</code></p>
+<pre><code>[1]:https://github.com
+[my blog]:https://codelearny.github.io/ &quot;我的博客&quot;
+[This is my blog][my blog]
+[github][1]</code></pre>
+<p><a href="https://codelearny.github.io/" title="我的博客">This is my blog</a><br><a target="_blank" rel="noopener" href="https://github.com/">github</a></p>
+<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p>图片定义和链接类似，以感叹号开头<code>![Alt Text](地址 &quot;标题&quot;)</code><br>也可以使用变量<code>![Alt Text][标识])</code></p>
+<pre><code>![说明](https://github.githubassets.com/favicons/favicon.png &quot;提示文字&quot;)
+![一个图片][2]
+[2]:/path/to/pic</code></pre>
+<p><img src="https://github.githubassets.com/favicons/favicon.png" alt="说明" title="提示文字"></p>
+<h4 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h4><p>锚点定义和链接定义类似 <code>[内容](#目标)</code><br>跳转的目标可以是各级标题<br>也可以使用html标记的id属性<code>&lt;span id=&quot;id&quot;&gt;锚点目标&lt;/span&gt;</code><br><code>[内容](#id)</code></p>
+<pre><code>[跳转到标题](#标题)
+[跳转到列表](#列表)</code></pre>
+<p><a href="#%E6%A0%87%E9%A2%98">跳转到标题</a><br><a href="#%E5%88%97%E8%A1%A8">跳转到列表</a></p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>Markdown支持html标签，可以直接在文档中使用</p>
+<pre><code>&lt;kbd&gt;kbd&lt;/kbd&gt;</code></pre>
+<p><kbd>kbd</kbd><br>Markdown使用\转义特殊字符</p>
+<pre><code>\`转义\`</code></pre>
+<p>`转义`</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">enjoyu</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
