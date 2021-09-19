@@ -217,6 +217,128 @@ protected void configure(HttpSecurity http) {
 3. `DaoAuthenticationProvider`通过`UserDetailsService`检索相关信息，得到`UserDetails`
 4. `DaoAuthenticationProvider`使用`PasswordEncoder`验证`UserDetails`
 5. 验证通过的`UserDetails`会被封装到`UsernamePasswordAuthenticationToken`，返回认证信息，进行过滤链后续处理
+### Authorization
+鉴权是指验证用户访问系统资源的权力，它的前提是用户身份已经通过认证。
+#### 框架结构
+##### 权限
+在`Authentication`中包含`GrantedAuthority`构成的集合，这些代表授予主体的权限。在`AuthenticationManager`认证过程中，保存到`Authentication`，在后续的鉴权过程中由`AccessDecisionManager`使用。
+权限通常可以简单的使用字符串标识，比如角色名称，可以使用方法`getAuthority()`返回值精确标识。如果是更复杂的情况，可以自定义`AccessDecisionManager`支持`GrantedAuthority`的具体实现，并且方法`getAuthority()`必须返回`null`。
+##### 前置处理
+`Spring Security`提供了拦截机制来控制方法调用或者web请求的访问。`AccessDecisionManager`在`AbstractSecurityInterceptor`中访问安全对象之前被调用，来决定是否有权限访问某种资源。
+###### 基于投票的AccessDecisionManager实现
+`Spring Security`提供了一种投票机制，一组`AccessDecisionVoter`轮询决定授予，拒绝或者弃权。默认提供了三种投票机制的实现
+* ConsensusBased 票多胜出，参数可以控制全部弃权或票数相等的情况
+* AffirmativeBased 一票通过，参数可以控制全部弃权的情况
+* UnanimousBased 一票否决，参数可以控制全部弃权的情况
+`RoleVoter`是比较常用的`AccessDecisionVoter`实现，使用角色名称标识并带有`ROLE_`前缀，角色不匹配拒绝访问，没有`ROLE_`前缀则弃权。
+##### 后置处理
+有些情况下，需要对安全对象的返回值做权限控制，使用`AOP`可以实现这一点，但是`Spring Security`提供了一种便捷的钩子来处理此类问题。`AfterInvocationManager`有唯一的实现`AfterInvocationProviderManager`，轮询一组`AfterInvocationProvider`，每个`provider`都可以修改返回的对象或者抛出拒绝访问的异常。
+##### 角色分级
+一个常见的需求是，一个角色可能包含多个其他角色的权限，例如`系统管理员`和`普通用户`，系统管理员包含普通用户的所有权限，除了直接授权还可以使系统管理员包含普通用户的角色，也就是角色分级机制，使用`RoleHierarchyVoter`配置不同角色直接的包含关系。
+#### web请求认证过程
+1. `FilterSecurityInterceptor`从`SecurityContextHolder`中取出`Authentication`
+2. 根据`HttpServletRequest`，`HttpServletResponse`，`FilterChain`创建`FilterInvocation`
+3. `FilterInvocation`传递给`SecurityMetadataSource`获取`ConfigAttribute`
+4. `Authentication`，`FilterInvocation`，`ConfigAttribute`s传递给`AccessDecisionManager`
+   * 如果授权被拒绝，则抛出`AccessDeniedException`，然后由`ExceptionTranslationFilter`处理。
+   * 如果允许访问，`FilterSecurityInterceptor`将后续访问`FilterChain`。
+#### 基于表达式的访问控制
+`Spring Security`使用`Spring EL`来支持基于表达式的访问控制。使用`SecurityExpressionRoot`作为根对象，以便提供内置表达式和对当前认证主体等值的访问。
+例如`hasRole(String role)`，方法可在根对象中查看。
+##### web安全表达式
+`web`环境中使用`WebSecurityExpressionRoot`，可以直接在表达式中使用`request`引用`HttpServletRequest`对象，此时使用`WebExpressionVoter`执行表达式鉴权。
+还可以通过`Spring Bean`方式自定义权限控制
+```java
+public class WebSecurity {
+	public boolean checkUserId(Authentication authentication, int id) {
+			...
+	}
+}
+```
+通过@引用`Spring Bean`，通过#引用路径变量
+```java
+http
+    .authorizeRequests(authorize -> authorize
+        .antMatchers("/user/{userId}/**").access("@webSecurity.checkUserId(authentication,#userId)")
+        ...
+    );
+```
+##### method安全表达式
+方法级别的安全使用一系列注解实现，根对象为`MethodSecurityExpressionRoot`
+* `@PreAuthorize`
+方法实际执行前判断是否可以执行，同样可以引用方法入参，`DefaultSecurityParameterNameDiscoverer`用来发现入参的名称
+```java
+@PreAuthorize("hasPermission(#contact, 'admin')")
+public void deletePermission(Contact contact, Sid recipient, Permission permission);
+```
+另外同样支持`Spring-EL`的各种特性
+```java
+@PreAuthorize("#contact.name == authentication.name")
+public void doSomething(Contact contact);
+```
+* `@PostAuthorize`
+可用于在方法执行后校验，可通过`returnObject`访问方法返回值
+```java
+@PostAuthorize("returnObject.id%2==0")
+public User check(List<Integer> users);
+```
+* `@PreFilter`
+可用于过滤集合类的入参，移除表达式结果为`false`的元素，多个集合可使用`filterTarget`指定，`filterObject`用来引用集合中当前元素
+```java
+@PreFilter(filterTarget="users", value="filterObject%2==0")
+public void remain(List<Integer> users, List<String> usernames);
+```
+* `@PostFilter`
+可用于过滤集合类的执行结果，移除表达式结果为`false`的元素，`filterObject`用来引用集合中当前元素
+```java
+@PreAuthorize("hasRole('USER')")
+@PostFilter("hasPermission(filterObject, 'read') or hasPermission(filterObject, 'admin')")
+public List<Contact> getAll();
+```
+为了代码可读性，可以定义元注解，对于复杂的表达式的重用特别便捷
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@PreAuthorize("#contact.name == authentication.name")
+public @interface ContactPermission {}
+```
+#### 安全对象实现
+`Spring Security`中的安全对象指所有需要被安全限制的对象，如方法调用，web请求等。通过拦截器机制实现安全控制，有动态和静态两种方式
+1. 动态的是通过`MethodSecurityInterceptor`实现的，基于AOP联盟，依赖`Spring`应用上下文通过代理实现织入，主要用于服务层安全
+2. `AspectJSecurityInterceptor`通过`AspectJ`编译器实现静态织入，主要用于领域对象实例安全
+#### 方法安全
+从2.0版本以来，`Spring Security`极大的提高了对服务层方法安全的支持，它支持`JSR-250`注释和`@Secured`注释。从3.0开始，还可以使用基于表达式的注解。可以使用`intercept-methods`装饰单个`Bean`，或者可以使用`AspectJ`风格的切面保护多个`Bean`。
+##### 注解支持
+在`@Configuration`注解的实例上使用`@EnableGlobalMethodSecurity`开启注解支持。
+注解在`Spring Bean`中使用才能生效--基于AOP，不在`Spring`上下文中的方法可使用`AspectJ`。
+指定`prePostEnabled`属性为`true`可以开启`pre post`系列注解，
+指定`securedEnabled`属性为`true`可以开启`Secured`注解，
+指定`jsr250Enabled`属性为`true`可以开启`JSR-250`系列注解。
+
+**注意**：可以同时开启多种注解方案在同一应用中，但是在同一个类中只有一种类型注解可以生效。
+
+`@EnableGlobalMethodSecurity`配置类可继承`GlobalMethodSecurityConfiguration`自定义设置 。
+#### 领域对象安全
+##### 前言
+相比于web和方法安全，实际应用中通常会定义更复杂的权限控制，而且安全决策需要同时包括`who`（身份验证）、`where`（方法调用）和`what`（领域对象）。
+考虑一个常见的需求，有两种角色，卖家和客户。卖家可以访问客户的数据，客户之间也有部分信息可以互相查看，使用`Spring Security`，通常有以下几种方案。
+1. 业务代码中直接控制权限访问，例如从`SecurityContextHolder`中取得认证数据，查询数据库获得领域对象信息。
+2. 实现一个`AccessDecisionVoter`，访问`Authentication`中的权限数据，自定义访问其他领域对象的权限。
+3. 实现一个`AccessDecisionVoter`，在投票器中查询数据库获得领域对象信息，从而做出鉴权决策。
+
+第一种方案，业务代码强关联，单元测试困难，领域对象的鉴权不能复用。
+第二种方案，如果权限数据量很大，加载权限消耗的内存和时间可能无法接受。
+最后一种没有前面描述的问题，并且实现了关注点分离，但是它仍然是低效的，因为在投票器和业务方法中都检索数据库访问领域对象信息，这显然不合理。
+另外，上面的方案都需要从头开始编写权限控制列表（ACL）持久化和业务代码。
+`Spring Security`为我们提供了一种便捷的域对象安全管理策略。
+##### 核心概念
+`Spring Security`领域对象安全功能以`ACL`的概念为核心，系统中每一个领域对象实例都拥有各自的`ACL`，记录哪些人可以哪些人不可以使用该领域对象。
+基于这一点，`Spring Security`为应用程序提供了三个主要的`ACL`相关功能：
+1. 高效检索所有领域对象ACL条目（并且修改他们）的方法
+2. 在方法调用之前，确保给定主体被允许处理对象方法
+3. 在方法调用之后，确保给定主体被允许处理对象或者返回值的方法
+
+ACL模块的主要功能之一是提供检索ACL的高性能方法，这个ACL存储库的功能十分重要，因为系统中的每个领域对象都有可能访问多个ACL条目，并且每个ACL可能从其他ACL继承，组成类似树一样的结构。
+ACL功能经过仔细设计，以提供高性能检索，可拔插缓存，死锁最小化数据库更新，独立于ORM框架（直接使用JDBC），适当的封装，透明的数据库更新等特性。
 
 ### CSRF
 Cross Site Request Forgery 跨站请求伪造，Spring Security默认启用csrf保护，CsrfFilter针对（"GET", "HEAD", "TRACE", "OPTIONS"）以外的方法生效，LazyCsrfTokenRepository将 CsrfToken 值存储在 HttpSession 中，并指定前端把CsrfToken 值放在名为“_csrf”的请求参数或名为“X-CSRF-TOKEN”的请求头字段里
@@ -1046,3 +1168,4 @@ public final class FormLoginConfigurer<H extends HttpSecurityBuilder<H>> extends
 		this.failureHandler.onAuthenticationFailure(request, response, failed);
 	}
 ```
+
